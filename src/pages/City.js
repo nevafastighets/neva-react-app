@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-export default class City extends
-Component {
+export default class City extends Component {
   render() {
-    return (
-      <div>
-        Ort
-      </div>
-    );
+    return <div>Ort</div>;
   }
 }
