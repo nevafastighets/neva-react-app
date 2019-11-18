@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import defaultBcg from "../assets/träd1.jpg";
-import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { PropertyContext } from "../PropertyContext";
@@ -10,8 +8,7 @@ export default class SingleProperty extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slug: this.props.match.params.slug,
-      defaultBcg: defaultBcg
+      slug: this.props.match.params.slug
     };
   }
 
@@ -31,20 +28,17 @@ export default class SingleProperty extends Component {
         </div>
       );
     }
-    const { title, description, images } = property;
-    const [mainImg, ...defaultImg] = images;
+    const { title, images, featuredImage } = property;
 
     return (
       <React.Fragment>
-        <StyledHero img={mainImg || this.state.defaultBcg}>
-          <Banner title={`${title}`}>
-            <p>Hej</p>
-          </Banner>
+        <StyledHero img={featuredImage}>
+          <Banner title={`${title}`}></Banner>
         </StyledHero>
         <section className="single-property">
           <div className="single-property-images">
-            {defaultImg.map((item, index) => {
-              return <img key={index} src={item} />;
+            {images.map((item, index) => {
+              return <img key={index} src={item} alt="" />;
             })}
           </div>
         </section>

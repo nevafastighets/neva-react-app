@@ -3,7 +3,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import FindProperty from "./pages/FindProperty";
-import City from "./pages/City";
+import SingleCity from "./pages/SingleCity";
 import SingleProperty from "./pages/SingleProperty";
 import Error from "./pages/Error";
 
@@ -17,10 +17,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/hitta-bostad" component={FindProperty} />
-        <Route exact path="/hitta-bostad/:ort" component={City} />
+        <Route exact path="/hitta-bostad/:cityslug" component={SingleCity} />
         <Route
           exact
-          path="/hitta-bostad/:ort/:slug"
+          path="/hitta-bostad/:cityslug/:slug"
           component={SingleProperty}
         />
         <Route component={Error} />

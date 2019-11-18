@@ -6,7 +6,6 @@ const PropertyContext = React.createContext();
 export default class PropertyProvider extends Component {
   state = {
     properties: [],
-    featuredProperties: [],
     loading: true
   };
 
@@ -16,12 +15,8 @@ export default class PropertyProvider extends Component {
         content_type: "fastigheter"
       });
       let properties = this.formatData(response.items);
-      let featuredProperties = properties.filter(
-        property => property.featured === true
-      );
       this.setState({
         properties,
-        featuredProperties,
         loading: false
       });
     } catch (error) {
@@ -37,8 +32,9 @@ export default class PropertyProvider extends Component {
     let tempItems = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
+      let featuredImage = item.fields.featuredImage.fields.file.url;
 
-      let property = { ...item.fields, images, id };
+      let property = { ...item.fields, featuredImage, images, id };
       return property;
     });
     return tempItems;

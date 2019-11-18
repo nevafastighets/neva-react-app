@@ -1,9 +1,11 @@
-import React from "react";
+import styled from "styled-components";
 
-export default function Hero({ children, hero }) {
-  return <header className={hero}>{children}</header>;
-}
+const Hero = styled.header`
+  height: 41.1875rem;
+  background: url(${props => props.img}) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-Hero.defaultProps = {
-  hero: "defaultHero"
-};
+export default Hero;
