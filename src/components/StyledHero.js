@@ -6,6 +6,9 @@ const StyledHero = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -160px;
+  z-index: -2;
+  position: relative;
 `;
 
 export default StyledHero;

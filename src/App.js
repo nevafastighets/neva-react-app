@@ -8,7 +8,7 @@ import SingleProperty from "./pages/SingleProperty";
 import Error from "./pages/Error";
 
 import { Route, Switch } from "react-router-dom";
-import Navigationbar from "./components/Navigationbar";
+import { Navigationbar } from "./components/Navigationbar";
 
 function App() {
   return (

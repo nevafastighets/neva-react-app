@@ -16,7 +16,7 @@ ReactDOM.render(
       </Router>
     </PropertyProvider>
   </CityProvider>,
-  document.getElementById("root")
+  document.body
 );
 
 serviceWorker.unregister();

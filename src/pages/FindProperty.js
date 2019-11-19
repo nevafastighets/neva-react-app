@@ -1,16 +1,18 @@
 import React from "react";
-import Hero from "../components/Hero";
+import SolidHero from "../components/SolidHero";
 import Banner from "../components/Banner";
-import headerImage from "../assets/blue.png";
 import PropertiesContainer from "../components/PropertiesContainer";
+import { Layout } from "../components/Layout";
 
 const FindProperty = () => {
   return (
     <React.Fragment>
-      <Hero img={headerImage}>
+      <SolidHero color="#313E5D">
         <Banner title="Hitta bostad" />
-      </Hero>
-      <PropertiesContainer />
+      </SolidHero>
+      <Layout>
+        <PropertiesContainer />
+      </Layout>
     </React.Fragment>
   );
 };

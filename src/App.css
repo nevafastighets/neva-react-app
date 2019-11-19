@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "GillSansMedium";
+  src: url("./fonts/GillSansMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GilroyBold";
+  src: url("./fonts/GilroyBold.ttf") format("truetype");
+}
+
+.overlay {
+  background-color: #313e5d;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.single-overlay {
+  background-color: #504c35;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,17 +47,19 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+
 /* globals */
 body {
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "GillSansMedium", sans-serif;
   line-height: 1.4;
 }
 h1 {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em;
+  font-family: "GilroyBold";
 }
 h2 {
   font-size: 2em;
@@ -203,7 +237,8 @@ h6 {
     padding: 2rem 6rem;
   }
   .banner h1 {
-    font-size: 4rem;
+    font-size: 3.3rem;
+    letter-spacing: 0.25rem;
   }
 }
 /* End of Banner */

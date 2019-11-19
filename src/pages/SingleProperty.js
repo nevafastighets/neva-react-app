@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { PropertyContext } from "../PropertyContext";
 import StyledHero from "../components/StyledHero";
+import { Layout } from "../components/Layout";
 
 export default class SingleProperty extends Component {
   constructor(props) {
@@ -33,15 +34,18 @@ export default class SingleProperty extends Component {
     return (
       <React.Fragment>
         <StyledHero img={featuredImage}>
+          <div className="single-overlay"></div>
           <Banner title={`${title}`}></Banner>
         </StyledHero>
-        <section className="single-property">
-          <div className="single-property-images">
-            {images.map((item, index) => {
-              return <img key={index} src={item} alt="" />;
-            })}
-          </div>
-        </section>
+        <Layout>
+          <section className="single-property">
+            <div className="single-property-images">
+              {images.map((item, index) => {
+                return <img key={index} src={item} alt="" />;
+              })}
+            </div>
+          </section>
+        </Layout>
       </React.Fragment>
     );
   }

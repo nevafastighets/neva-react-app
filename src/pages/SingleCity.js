@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CityContext } from "../CityContext";
 import StyledHero from "../components/StyledHero";
 import CityPropertiesContainer from "../components/CityPropertiesContainer";
+import { Layout } from "../components/Layout";
 
 export default class SingleCity extends Component {
   constructor(props) {
@@ -34,11 +35,14 @@ export default class SingleCity extends Component {
     return (
       <React.Fragment>
         <StyledHero img={featuredImage}>
+          <div className="single-overlay"></div>
           <Banner title={`${title}`}></Banner>
         </StyledHero>
-        <section>
-          <CityPropertiesContainer cityid={`${id}`} />
-        </section>
+        <Layout>
+          <section>
+            <CityPropertiesContainer cityid={`${id}`} />
+          </section>
+        </Layout>
       </React.Fragment>
     );
   }

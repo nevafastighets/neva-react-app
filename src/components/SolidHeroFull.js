@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Hero = styled.header`
-  height: 41.1875rem;
-  background: url(${props => props.img}) center/cover no-repeat;
+const SolidHeroFull = styled.header`
+  height: 100vh;
+  background-color: ${props => props.color};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,4 +11,4 @@ const Hero = styled.header`
   position: relative;
 `;
 
-export default Hero;
+export default SolidHeroFull;
