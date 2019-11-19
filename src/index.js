@@ -7,11 +7,13 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { PropertyProvider } from "./PropertyContext";
 import { CityProvider } from "./CityContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
   <CityProvider>
     <PropertyProvider>
       <Router>
+        <ScrollToTop />
         <App />
       </Router>
     </PropertyProvider>
