@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Banner from "../components/Banner";
-import { Link } from "react-router-dom";
+import SolidHeroFull from "../components/SolidHeroFull";
 import { CityContext } from "../CityContext";
 import StyledHero from "../components/StyledHero";
 import CityPropertiesContainer from "../components/CityPropertiesContainer";
@@ -22,12 +22,12 @@ export default class SingleCity extends Component {
 
     if (!city) {
       return (
-        <div className="error">
-          <h3>Kan inte hitta någon ort</h3>
-          <Link to="/" className="btn-primary">
-            Tillbaka
-          </Link>
-        </div>
+        <SolidHeroFull color="#504c35">
+          <Banner
+            title="404-Fel"
+            subtitle="Vi hittade tyvärr inte det du letade efter."
+          />
+        </SolidHeroFull>
       );
     }
     const { title, featuredImage, id } = city;

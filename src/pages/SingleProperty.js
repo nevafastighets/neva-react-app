@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Banner from "../components/Banner";
+import SolidHeroFull from "../components/SolidHeroFull";
 import { Link } from "react-router-dom";
 import { PropertyContext } from "../PropertyContext";
 import StyledHero from "../components/StyledHero";
@@ -22,12 +23,12 @@ export default class SingleProperty extends Component {
 
     if (!property) {
       return (
-        <div className="error">
-          <h3>Kan inte hitta någon fastighet</h3>
-          <Link to="/hitta-bostad" className="btn-primary">
-            Tillbaka
-          </Link>
-        </div>
+        <SolidHeroFull color="#504c35">
+          <Banner
+            title="404-Fel"
+            subtitle="Vi hittade tyvärr inte det du letade efter."
+          />
+        </SolidHeroFull>
       );
     }
     const {
@@ -48,6 +49,12 @@ export default class SingleProperty extends Component {
         <div className="row single-property-row row-eq-height">
           <div className="single-property-title col-sm-12 col-lg-6 col-md-12 col-xs-12 container-left">
             <Title title={`${title}`} />
+            <p>
+              Denna fastighet ägs av{" "}
+              <Link to="/vara-bolag#neva-fastighets-ab">
+                Neva Fastighets AB
+              </Link>
+            </p>
             <p>{textareaone}</p>
           </div>
           <div className="col-sm-12 col-lg-6 col-md-12 col-xs-12 container-right align-content-center flex-wrap accent-background accent-p accent-facility">
@@ -56,8 +63,8 @@ export default class SingleProperty extends Component {
             </div>
             {facilities.map((item, index) => {
               return (
-                <div className="facility">
-                  <p key={index}>- {item}</p>
+                <div key={index} className="facility">
+                  <p>- {item}</p>
                 </div>
               );
             })}
