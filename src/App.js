@@ -9,6 +9,7 @@ import Error from "./pages/Error";
 
 import { Route, Switch } from "react-router-dom";
 import { Navigationbar } from "./components/Navigationbar";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         />
         <Route component={Error} />
       </Switch>
+      <Footer />
     </React.Fragment>
   );
 }

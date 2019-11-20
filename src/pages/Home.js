@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import headerImage from "../assets/defaultBcg.jpg";
 import CitiesContainer from "../components/CitiesContainer";
 import { Layout } from "../components/Layout";
+import { Title } from "../components/Title";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Banner title="Vi förverkligar ditt hem" />
       </Hero>
       <Layout>
+        <Title title="Vi finns i flera orter." />
         <CitiesContainer />
       </Layout>
     </React.Fragment>

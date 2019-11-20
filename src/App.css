@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "GillSansMediumItalic";
+  src: url("./fonts/GillSansMediumItalic.otf") format("opentype");
+}
+
+@font-face {
   font-family: "GilroyBold";
   src: url("./fonts/GilroyBold.ttf") format("truetype");
 }
@@ -30,6 +35,11 @@
   z-index: -1;
 }
 
+.container {
+  margin-top: 4.5rem;
+  margin-bottom: 12rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +49,7 @@
   --primaryColor: #af9a7d;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
+  --mainBlack: #505050;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -51,7 +61,7 @@
 /* globals */
 body {
   color: var(--mainBlack);
-  background: var(--mainWhite);
+  background-color: #f7f7f7 !important;
   font-family: "GillSansMedium", sans-serif;
   line-height: 1.4;
 }
@@ -62,8 +72,11 @@ h1 {
   font-family: "GilroyBold";
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.3em;
   margin-bottom: 0.75em;
+  font-family: "GilroyBold";
+  letter-spacing: 3.45px;
+  color: #505050;
 }
 h3 {
   font-size: 1.5em;
@@ -245,7 +258,7 @@ h6 {
 /* Title */
 .section-title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .section-title h4 {
   font-size: 2rem;
@@ -394,7 +407,6 @@ h6 {
 /* end of single property*/
 /* propertylist */
 .propertieslist {
-  padding: 5rem 0;
 }
 .propertieslist-center {
   width: 80vw;
