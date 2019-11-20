@@ -30,7 +30,14 @@ export default class SingleProperty extends Component {
         </div>
       );
     }
-    const { title, images, featuredImage, textareaone, textareatwo } = property;
+    const {
+      title,
+      images,
+      featuredImage,
+      textareaone,
+      textareatwo,
+      facilities
+    } = property;
 
     return (
       <React.Fragment>
@@ -43,14 +50,17 @@ export default class SingleProperty extends Component {
             <Title title={`${title}`} />
             <p>{textareaone}</p>
           </div>
-          <div className="col-sm-12 col-lg-6 col-md-12 col-xs-12 container-right vertical-align accent-background accent-p accent-facility">
-            <p>
-              Denna fastighet:
-              <br />- Parkering
-              <br />- Gång avstånd till Strand
-              <br />- Sommar och vinter
-              <br />- Familjär innergård där barnen kan leka
-            </p>
+          <div className="col-sm-12 col-lg-6 col-md-12 col-xs-12 container-right align-content-center flex-wrap accent-background accent-p accent-facility">
+            <div className="facility-title">
+              <p>Denna fastighet:</p>
+            </div>
+            {facilities.map((item, index) => {
+              return (
+                <div className="facility">
+                  <p key={index}>- {item}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="row row-eq-height">
@@ -59,11 +69,11 @@ export default class SingleProperty extends Component {
           </div>
           <div className="col-sm-12 col-lg-6 col-md-12 col-xs-12 single-property-gallery">
             <Carousel className="single-property-gallery-carousel">
-              {images.map(item => {
+              {images.map((item, index) => {
                 return (
-                  <Carousel.Item>
+                  <Carousel.Item key={index}>
                     <img
-                      className="d-block w-100 single-property-gallery-image"
+                      className="d-block w-100"
                       src={item + "?fit=scale&h=560"}
                       alt=""
                     />

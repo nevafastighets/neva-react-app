@@ -3,13 +3,11 @@ import Property from "./Property";
 
 const PropertiesList = ({ properties }) => {
   return (
-    <section className="propertieslist">
-      <div className="propertieslist-center">
-        {properties.map(item => {
-          return <Property key={item.id} property={item} />;
-        })}
-      </div>
-    </section>
+    <div className="d-flex flex-wrap grid-listing justify-content-center bd-highlight">
+      {properties.map(item => {
+        return <Property key={item.id} property={item} />;
+      })}
+    </div>
   );
 };
 

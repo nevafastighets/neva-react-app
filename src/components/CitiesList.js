@@ -3,13 +3,11 @@ import City from "./City";
 
 const CitiesList = ({ cities }) => {
   return (
-    <section className="propertieslist">
-      <div className="propertieslist-center">
-        {cities.map(item => {
-          return <City key={item.id} city={item} />;
-        })}
-      </div>
-    </section>
+    <div className="d-flex flex-wrap justify-content-center bd-highlight">
+      {cities.map(item => {
+        return <City key={item.id} city={item} />;
+      })}
+    </div>
   );
 };
 

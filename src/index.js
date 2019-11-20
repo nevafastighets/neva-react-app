@@ -18,7 +18,7 @@ ReactDOM.render(
       </Router>
     </PropertyProvider>
   </CityProvider>,
-  document.body
+  document.getElementById("neva")
 );
 
 serviceWorker.unregister();

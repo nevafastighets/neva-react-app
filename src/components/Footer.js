@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import nevaLogo from "../assets/nevaLogo.svg";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Styles = styled.div`
   footer {
