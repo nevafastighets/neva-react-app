@@ -29,6 +29,14 @@ h2 {
   color: #505050;
 }
 
+h3 {
+  font-size: 1.2em !important;
+  margin-bottom: 0.75em;
+  font-family: "GilroyBold";
+  letter-spacing: 2.45px;
+  color: #505050;
+}
+
 @font-face {
   font-family: "GillSansMedium";
   src: url("./fonts/GillSansMedium.otf") format("opentype");
@@ -282,7 +290,7 @@ visited {
 }
 
 .section-title {
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 3rem;
 }
 
@@ -306,6 +314,9 @@ visited {
 .banner p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  font-family: "GillSansMedium";
+  font-size: 1.5rem;
+  letter-spacing: 4px;
 }
 
 @media screen and (min-width: 576px) {
@@ -325,4 +336,45 @@ visited {
     font-size: 3.3rem;
     letter-spacing: 0.25rem;
   }
+}
+
+.form-control.contact-input {
+  background-color: #e6e6e6;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  height: auto;
+  font-family: "GillSansMedium" !important;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.form-control.contact-input:focus {
+  background-color: #e6e6e6 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.btn.btn-primary.contact-button {
+  background-color: #e6e6e6;
+  border: none;
+  padding: 0.5rem 2.2rem;
+  border-radius: 25px;
+  color: #495057;
+  font-family: "GillSansMedium" !important;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+}
+
+.btn-primary.contact-button:focus {
+  background-color: #e6e6e6;
+  box-shadow: none;
+  border: none;
+}
+
+.btn-primary.contact-button:hover {
+  background-color: #495057;
+  box-shadow: none;
+  border: none;
+  color: #ffffff;
 }

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Banner from "../components/Banner";
+import { HashLink as Link } from "react-router-hash-link";
 import SolidHeroFull from "../components/SolidHeroFull";
-import { Link } from "react-router-dom";
 import { PropertyContext } from "../PropertyContext";
 import StyledHero from "../components/StyledHero";
-import { Title } from "../components/Title";
+import Title from "../components/Title";
 import { Carousel } from "react-bootstrap";
 
 export default class SingleProperty extends Component {
@@ -37,7 +37,8 @@ export default class SingleProperty extends Component {
       featuredImage,
       textareaone,
       textareatwo,
-      facilities
+      facilities,
+      bolag
     } = property;
 
     return (
@@ -51,8 +52,8 @@ export default class SingleProperty extends Component {
             <Title title={`${title}`} />
             <p>
               Denna fastighet ägs av{" "}
-              <Link to="/vara-bolag#neva-fastighets-ab">
-                Neva Fastighets AB
+              <Link to={"../../vara-bolag#" + bolag.fields.companyslug}>
+                {bolag.fields.companyName}
               </Link>
             </p>
             <p>{textareaone}</p>

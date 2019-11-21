@@ -14,9 +14,16 @@ const StyledHero = styled.div`
 `;
 
 export default function Company({ company }) {
-  const { companyName, featuredImage, descriptionone } = company;
+  const {
+    companyName,
+    featuredImage,
+    descriptionone,
+    phonenumber,
+    email,
+    companyslug
+  } = company;
   return (
-    <div className="company bd-highlight">
+    <div className="company bd-highlight" id={companyslug}>
       <div className="row">
         <div className="col-auto">
           <StyledHero img={featuredImage} />
@@ -25,6 +32,8 @@ export default function Company({ company }) {
           <div className="company-grid-content">
             <span className="company-grid-title">{companyName}</span>
             <span className="company-grid-desc">{descriptionone}</span>
+            <span className="company-grid-desc">{phonenumber}</span>
+            <span className="company-grid-desc">{email}</span>
           </div>
         </div>
       </div>

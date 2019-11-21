@@ -15,7 +15,6 @@ export default class CompanyProvider extends Component {
         content_type: "bolag",
         order: "fields.order"
       });
-      console.log(response.items);
       let companies = this.formatData(response.items);
       this.setState({
         companies,

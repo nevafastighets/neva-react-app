@@ -5,15 +5,22 @@ import headerImage from "../assets/ourcompany.jpg";
 import CompaniesContainer from "../components/CompaniesContainer";
 import { CompanyProvider } from "../CompanyContext";
 import { Layout } from "../components/Layout";
-import { Title } from "../components/Title";
+import Title from "../components/Title";
+import styled from "styled-components";
 
-export default function Home() {
+const BannerMargin = styled.div`
+  margin-top: 6rem;
+`;
+
+export default function OurCompany() {
   return (
     <React.Fragment>
       <CompanyProvider>
-        <Hero img={headerImage}>
+        <Hero height="31" img={headerImage}>
           <div className="overlay"></div>
-          <Banner title="Våra bolag" subtitle="Vi är moderbolaget." />
+          <BannerMargin>
+            <Banner title="Våra bolag" subtitle="Vi är moderbolaget." />
+          </BannerMargin>
         </Hero>
         <Layout>
           <Title title="Vi är ett växande företag." />
