@@ -187,6 +187,18 @@ h2 {
   transition: all 0.5s ease;
 }
 
+.company {
+  height: auto;
+  width: 100%;
+  background-color: #efefef;
+  transition: all 0.5s ease;
+}
+
+.company .col,
+.col-auto {
+  padding: 0 !important;
+}
+
 .property:hover {
   width: 22rem;
 }
@@ -243,6 +255,29 @@ visited {
   color: #757575;
   opacity: 0.8;
   width: 17.900625rem !important;
+  display: inline-block;
+}
+
+.company-grid-content {
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+.company-grid-title {
+  float: left;
+  font-size: 21px;
+  font-family: "GilroyBold" !important;
+  letter-spacing: 2px;
+  color: #444444;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+.company-grid-desc {
+  font-size: 17px;
+  font-family: "GillSansMedium" !important;
+  color: #757575;
+  opacity: 0.8;
+  width: 70% !important;
   display: inline-block;
 }
 

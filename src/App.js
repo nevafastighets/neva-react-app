@@ -3,6 +3,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import FindProperty from "./pages/FindProperty";
+import OurCompany from "./pages/OurCompany";
 import SingleCity from "./pages/SingleCity";
 import SingleProperty from "./pages/SingleProperty";
 import Error from "./pages/Error";
@@ -17,6 +18,7 @@ function App() {
       <Navigationbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/vara-bolag" component={OurCompany} />
         <Route exact path="/hitta-bostad" component={FindProperty} />
         <Route exact path="/hitta-bostad/:cityslug" component={SingleCity} />
         <Route
