@@ -189,7 +189,7 @@ h3 {
 }
 
 .property {
-  height: auto;
+  height: 28.75rem;
   width: 21.5rem;
   background-color: #efefef;
   transition: all 0.5s ease;
@@ -377,4 +377,19 @@ visited {
   box-shadow: none;
   border: none;
   color: #ffffff;
+}
+
+.city {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.property {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.company {
+  border-radius: 8px;
+  overflow: hidden;
 }
