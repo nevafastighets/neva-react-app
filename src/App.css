@@ -184,9 +184,9 @@ h3 {
   transition: all 0.5s ease;
 }
 
-.city:hover {
+/* .city:hover {
   width: 22rem;
-}
+} */
 
 .property {
   height: 28.75rem;
@@ -207,9 +207,9 @@ h3 {
   padding: 0 !important;
 }
 
-.property:hover {
+/* .property:hover {
   width: 22rem;
-}
+} */
 
 .city-margin {
   margin: 0 1rem 1.5rem 1rem !important;
