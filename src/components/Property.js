@@ -11,7 +11,7 @@ const Box = posed.div({
     scale: 1
   },
   hover: {
-    scale: 1.05
+    scale: 1.03
   },
   press: {
     scale: 1

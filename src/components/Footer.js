@@ -14,7 +14,7 @@ const Styles = styled.div`
 
   footer p {
     opacity: 0.6;
-    font-family: "GillSansMediumItalic", sans-serif;
+    font-family: "GillSansMedium", sans-serif;
     letter-spacing: 1px;
   }
 

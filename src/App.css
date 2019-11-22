@@ -9,10 +9,42 @@
   --mainBlack: #505050;
 } */
 
+@font-face {
+  font-family: "GillSansBook";
+  src: url("./fonts/GillSansBook.eot");
+  src: url("./fonts/GillSansBook.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/GillSansBook.woff2") format("woff2"),
+    url("./fonts/GillSansBook.woff") format("woff"),
+    url("./fonts/GillSansBook.ttf") format("truetype"),
+    url("./fonts/GillSansBook.otf") format("opentype"),
+    url("./fonts/GillSansBook.svg#Gill Sans Nova Book") format("svg");
+}
+
+@font-face {
+  font-family: "GillSansMedium";
+  src: url("./fonts/GillSansMedium.eot");
+  src: url("./fonts/GillSansMedium.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/GillSansMedium.woff2") format("woff2"),
+    url("./fonts/GillSansMedium.woff") format("woff"),
+    url("./fonts/GillSansMedium.ttf") format("truetype"),
+    url("./fonts/GillSansMedium.otf") format("opentype"),
+    url("./fonts/GillSansMedium.svg#Gill Sans Nova Medium") format("svg");
+}
+
+@font-face {
+  font-family: "GilroyBold";
+  src: url("./fonts/GilroyBold.eot");
+  src: url("./fonts/GilroyBold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/GilroyBold.woff2") format("woff2"),
+    url("./fonts/GilroyBold.woff") format("woff"),
+    url("./fonts/GilroyBold.ttf") format("truetype"),
+    url("./fonts/GilroyBold.svg#Gilroy-Bold") format("svg");
+}
+
 body {
   color: #505050;
   background-color: #f7f7f7 !important;
-  font-family: "GillSansMedium";
+  font-family: "GillSansBook";
   line-height: 1.4;
 }
 h1 {
@@ -37,7 +69,7 @@ h3 {
   color: #505050;
 }
 
-@font-face {
+/* @font-face {
   font-family: "GillSansMedium";
   src: url("./fonts/GillSansMedium.otf") format("opentype");
 }
@@ -50,7 +82,7 @@ h3 {
 @font-face {
   font-family: "GilroyBold";
   src: url("./fonts/GilroyBold.ttf") format("truetype");
-}
+} */
 
 .overlay {
   background-color: #313e5d;
@@ -105,14 +137,14 @@ h3 {
 .accent-p p {
   color: #ffffff !important;
   opacity: 0.7 !important;
-  font-family: "GillSansMedium", sans-serif !important;
+  font-family: "GillSansMedium" !important;
   font-size: 1.15rem !important;
 }
 
 .accent-facility p {
   color: #ffffff !important;
   opacity: 0.7 !important;
-  font-family: "GillSansMediumItalic", sans-serif !important;
+  font-family: "GillSansMedium" !important;
   font-size: 1.3rem !important;
 }
 
@@ -122,7 +154,7 @@ h3 {
 }
 
 .single-property-row p {
-  font-family: "GillSansMedium", sans-serif;
+  font-family: "GillSansMedium";
   font-size: 1.15rem;
 }
 
