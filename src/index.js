@@ -10,14 +10,14 @@ import { CityProvider } from "./CityContext";
 import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
-  <CityProvider>
-    <PropertyProvider>
-      <Router>
+  <Router>
+    <CityProvider>
+      <PropertyProvider>
         <ScrollToTop />
         <App />
-      </Router>
-    </PropertyProvider>
-  </CityProvider>,
+      </PropertyProvider>
+    </CityProvider>
+  </Router>,
   document.getElementById("neva")
 );
 

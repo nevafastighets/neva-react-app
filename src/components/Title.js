@@ -6,6 +6,7 @@ export default function Title({ title, subtitle, className }) {
       <React.Fragment>
         <div
           className={
+            // eslint-disable-next-line
             className ? "section-title" + " " + className : "section-title"
           }
         >
@@ -18,6 +19,7 @@ export default function Title({ title, subtitle, className }) {
       <React.Fragment>
         <div
           className={
+            // eslint-disable-next-line
             className ? "section-title" + " " + className : "section-title"
           }
         >
