@@ -3,6 +3,9 @@ import styled from "styled-components";
 import nevaLogo from "../assets/nevaLogo.svg";
 import { Link } from "react-router-dom";
 
+import { withPageConsumer } from "../PageContext";
+import Preloader from "./Preloader";
+
 const Styles = styled.div`
   footer {
     background-color: #1c2527;
@@ -49,29 +52,32 @@ const Styles = styled.div`
   }
 `;
 
-export const Footer = () => (
-  <Styles>
-    <footer className="footer">
-      <div className="d-flex footer-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
-        <div className="p-2 bd-highlight">
-          <Link to="/">
-            <img className="footer-logo" alt="" src={nevaLogo}></img>
-          </Link>
-          <br />
-          <p className="footer-copyright">Copyright 2020</p>
+function Footer({ context }) {
+  const { loading, footercontent } = context;
+  if (loading) {
+    return <Preloader />;
+  }
+
+  return (
+    <Styles>
+      <footer className="footer">
+        <div className="d-flex footer-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+          <div className="p-2 bd-highlight">
+            <Link to="/">
+              <img className="footer-logo" alt="" src={nevaLogo}></img>
+            </Link>
+            <br />
+            <p className="footer-copyright">{footercontent.copyrightText}</p>
+          </div>
+          <div className="p-2 bd-highlight">
+            <p className="footer-col-title">{footercontent.areaoneTitle}</p>
+            <p className="footer-col-desc">{footercontent.areaoneText}</p>
+            <p>Website created by Oblign</p>
+          </div>
         </div>
-        <div className="p-2 bd-highlight">
-          <p className="footer-col-title">Kontakt</p>
-          <p className="footer-col-desc">
-            Probabo, inquit, modo ista sis aequitate, quam interrogare aut petat
-            aut rerum necessitatibus saepe eveniet, ut labore et caritatem, quae
-            dices, libenter assentiar probabo, inquit, sic agam, ut aliquid ex
-            eo ortum, tam egregios viros censes tantas res gessisse sine causa?
-            quae fuerit causa, nollem.
-          </p>
-          <p>Website created by Oblign</p>
-        </div>
-      </div>
-    </footer>
-  </Styles>
-);
+      </footer>
+    </Styles>
+  );
+}
+
+export default withPageConsumer(Footer);

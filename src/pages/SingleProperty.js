@@ -7,6 +7,9 @@ import StyledHero from "../components/StyledHero";
 import Title from "../components/Title";
 import { Carousel } from "react-bootstrap";
 
+import { Navigationbar } from "../components/Navigationbar";
+import Footer from "../components/Footer";
+
 export default class SingleProperty extends Component {
   constructor(props) {
     super(props);
@@ -23,12 +26,16 @@ export default class SingleProperty extends Component {
 
     if (!property) {
       return (
-        <SolidHeroFull color="#504c35">
-          <Banner
-            title="404-Fel"
-            subtitle="Vi hittade tyvärr inte det du letade efter."
-          />
-        </SolidHeroFull>
+        <React.Fragment>
+          <Navigationbar />
+          <SolidHeroFull color="#504c35">
+            <Banner
+              title="404-Fel"
+              subtitle="Vi hittade tyvärr inte bostaden du letade efter."
+            />
+          </SolidHeroFull>
+          <Footer />
+        </React.Fragment>
       );
     }
     const {
@@ -43,6 +50,7 @@ export default class SingleProperty extends Component {
 
     return (
       <React.Fragment>
+        <Navigationbar />
         <StyledHero img={featuredImage}>
           <div className="single-overlay"></div>
           <Banner title={`${title}`}></Banner>
@@ -91,6 +99,7 @@ export default class SingleProperty extends Component {
             </Carousel>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

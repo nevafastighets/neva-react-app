@@ -1,30 +1,51 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
-import headerImage from "../assets/contact.jpg";
 import { Layout } from "../components/Layout";
 import Title from "../components/Title";
 import styled from "styled-components";
+
+import { withPageConsumer } from "../PageContext";
+import Preloader from "../components/Preloader";
+
+import { Navigationbar } from "../components/Navigationbar";
+import Footer from "../components/Footer";
 
 const BannerMargin = styled.div`
   margin-top: 6rem;
 `;
 
-export default function Contact() {
+function Contact({ context }) {
+  const { loading, contactpage } = context;
+  if (loading) {
+    return <Preloader />;
+  }
+
   return (
     <React.Fragment>
-      <Hero height="31" img={headerImage}>
+      <Navigationbar />
+      <Hero height="31" img={contactpage.headerImage}>
         <div className="overlay"></div>
         <BannerMargin>
-          <Banner title="Kontakta oss" subtitle="Vi hjälper dig gärna." />
+          <Banner
+            title={contactpage.headerTitle}
+            subtitle={contactpage.headerSubtitle}
+          />
         </BannerMargin>
       </Hero>
       <Layout>
         <Title
-          title="Vi gillar nöjda kunder,"
-          subtitle="därför har vi valt att digitalisera vår process."
+          title={contactpage.contentTitle}
+          subtitle={contactpage.contentSubtitle}
         />
-        <form name="contact">
+        <form
+          name="contact"
+          data-netlify="true"
+          netlify
+          id="contactForm"
+          method="POST"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-group row justify-content-center">
             <div className="col-md-8 col-lg-4 col-xl-4">
               <input
@@ -39,7 +60,7 @@ export default function Contact() {
             <div className="col-md-8 col-lg-4 col-xl-4">
               <textarea
                 class="form-control contact-input"
-                name="Message"
+                name="message"
                 rows="5"
                 placeholder="Meddelande"
               ></textarea>
@@ -52,6 +73,9 @@ export default function Contact() {
           </div>
         </form>
       </Layout>
+      <Footer />
     </React.Fragment>
   );
 }
+
+export default withPageConsumer(Contact);

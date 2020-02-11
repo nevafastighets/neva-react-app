@@ -6,6 +6,9 @@ import StyledHero from "../components/StyledHero";
 import CityPropertiesContainer from "../components/CityPropertiesContainer";
 import { Layout } from "../components/Layout";
 
+import { Navigationbar } from "../components/Navigationbar";
+import Footer from "../components/Footer";
+
 export default class SingleCity extends Component {
   constructor(props) {
     super(props);
@@ -22,18 +25,23 @@ export default class SingleCity extends Component {
 
     if (!city) {
       return (
-        <SolidHeroFull color="#504c35">
-          <Banner
-            title="404-Fel"
-            subtitle="Vi hittade tyvärr inte det du letade efter."
-          />
-        </SolidHeroFull>
+        <React.Fragment>
+          <Navigationbar />
+          <SolidHeroFull color="#504c35">
+            <Banner
+              title="404-Fel"
+              subtitle="Vi hittade tyvärr inte orten du letade efter."
+            />
+          </SolidHeroFull>
+          <Footer />
+        </React.Fragment>
       );
     }
     const { title, featuredImage, id } = city;
 
     return (
       <React.Fragment>
+        <Navigationbar />
         <StyledHero img={featuredImage}>
           <div className="single-overlay"></div>
           <Banner title={`${title}`}></Banner>
@@ -43,6 +51,7 @@ export default class SingleCity extends Component {
             <CityPropertiesContainer cityid={`${id}`} />
           </section>
         </Layout>
+        <Footer />
       </React.Fragment>
     );
   }

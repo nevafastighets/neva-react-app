@@ -12,13 +12,10 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 
 import { Route, Switch } from "react-router-dom";
-import { Navigationbar } from "./components/Navigationbar";
-import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <React.Fragment>
-      <Navigationbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/vara-bolag" component={OurCompany} />
@@ -34,7 +31,6 @@ function App() {
         />
         <Route component={Error} />
       </Switch>
-      <Footer />
     </React.Fragment>
   );
 }
