@@ -51,12 +51,12 @@ body {
 h1 {
   font-size: 3em;
   line-height: 1;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   font-family: "GilroyBold";
 }
 h2 {
   font-size: 2em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.4em;
   font-family: "GilroyBold";
   letter-spacing: 3.45px;
   color: #505050 !important;
