@@ -45,7 +45,12 @@ body {
   color: #757575 !important;
   background-color: #f7f7f7 !important;
   font-family: "GillSansBook";
-  line-height: 1.4;
+  line-height: 1.5;
+  letter-spacing: 1.3px;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
   letter-spacing: 1.3px;
 }
 h1 {
