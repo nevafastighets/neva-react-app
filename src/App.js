@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Home from "./pages/Home";
-import FindProperty from "./pages/FindProperty";
+import OurProperty from "./pages/OurProperty";
 import OurCompany from "./pages/OurCompany";
 import SingleCity from "./pages/SingleCity";
 import SingleProperty from "./pages/SingleProperty";
@@ -18,15 +18,19 @@ function App() {
     <React.Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/vara-fastigheter" component={OurProperty} />
+        <Route
+          exact
+          path="/vara-fastigheter/:cityslug"
+          component={SingleCity}
+        />
         <Route exact path="/vara-bolag" component={OurCompany} />
-        <Route exact path="/hitta-bostad" component={FindProperty} />
-        <Route exact path="/hitta-bostad/:cityslug" component={SingleCity} />
         <Route exact path="/om-oss" component={AboutUs} />
         <Route exact path="/hyresobjekt" component={RentObject} />
         <Route exact path="/kontakt" component={Contact} />
         <Route
           exact
-          path="/hitta-bostad/:cityslug/:slug"
+          path="/vara-fastigheter/:cityslug/:slug"
           component={SingleProperty}
         />
         <Route component={Error} />

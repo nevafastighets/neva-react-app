@@ -4,7 +4,7 @@ import nevaLogo from "../assets/nevaLogo.svg";
 import { Link } from "react-router-dom";
 
 import { withPageConsumer } from "../PageContext";
-import Preloader from "./Preloader";
+import Loading from "./Loading";
 
 const Styles = styled.div`
   footer {
@@ -21,12 +21,17 @@ const Styles = styled.div`
     letter-spacing: 1px;
   }
 
+  footer a {
+    color: #ffffff;
+  }
+
   .footer-logo {
     height: 68px;
   }
 
   .footer-copyright {
     margin-top: 18px;
+    letter-spacing: 1.3px;
   }
 
   .footer-col-title {
@@ -49,19 +54,20 @@ const Styles = styled.div`
   .footer-col-desc {
     word-wrap: break-word;
     max-width: 34rem;
+    letter-spacing: 1.3px;
   }
 `;
 
 function Footer({ context }) {
   const { loading, footercontent } = context;
   if (loading) {
-    return <Preloader />;
+    return <Loading />;
   }
 
   return (
     <Styles>
       <footer className="footer">
-        <div className="d-flex footer-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+        <div className="d-flex footer-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row">
           <div className="p-2 bd-highlight">
             <Link to="/">
               <img className="footer-logo" alt="" src={nevaLogo}></img>
@@ -72,7 +78,17 @@ function Footer({ context }) {
           <div className="p-2 bd-highlight">
             <p className="footer-col-title">{footercontent.areaoneTitle}</p>
             <p className="footer-col-desc">{footercontent.areaoneText}</p>
-            <p>Website created by Oblign</p>
+            <a
+              href="http://alexanderwassbjer.se/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <p>Website created by Alexander Wassbjer</p>
+            </a>
+          </div>
+          <div className="p-2 bd-highlight">
+            <p className="footer-col-title">{footercontent.areatwoTitle}</p>
+            <p className="footer-col-desc">{footercontent.areatwoText}</p>
           </div>
         </div>
       </footer>

@@ -22,7 +22,6 @@ function OurCompany({ context }) {
   if (loading) {
     return <Preloader />;
   }
-  console.log(ourcompanypage);
 
   return (
     <React.Fragment>

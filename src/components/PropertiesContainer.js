@@ -8,6 +8,7 @@ function PropertiesContainer({ context }) {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <React.Fragment>
       <PropertiesList properties={properties} />

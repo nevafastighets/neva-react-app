@@ -9,6 +9,7 @@ import { Carousel } from "react-bootstrap";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
+import SubFooterProperty from "../components/SubFooterProperty";
 
 export default class SingleProperty extends Component {
   constructor(props) {
@@ -45,7 +46,8 @@ export default class SingleProperty extends Component {
       textareaone,
       textareatwo,
       facilities,
-      bolag
+      bolag,
+      city
     } = property;
 
     return (
@@ -53,7 +55,7 @@ export default class SingleProperty extends Component {
         <Navigationbar />
         <StyledHero img={featuredImage}>
           <div className="single-overlay"></div>
-          <Banner title={`${title}`}></Banner>
+          <Banner title={`${title}`} subtitle={`${city.fields.title}`}></Banner>
         </StyledHero>
         <div className="row single-property-row row-eq-height">
           <div className="single-property-title col-sm-12 col-lg-6 col-md-12 col-xs-12 container-left">
@@ -68,7 +70,7 @@ export default class SingleProperty extends Component {
           </div>
           <div className="col-sm-12 col-lg-6 col-md-12 col-xs-12 container-right align-content-center flex-wrap accent-background accent-p accent-facility">
             <div className="facility-title">
-              <p>Denna fastighet:</p>
+              <p>Bekvämligheter:</p>
             </div>
             {facilities.map((item, index) => {
               return (
@@ -99,6 +101,7 @@ export default class SingleProperty extends Component {
             </Carousel>
           </div>
         </div>
+        <SubFooterProperty city={city} />
         <Footer />
       </React.Fragment>
     );

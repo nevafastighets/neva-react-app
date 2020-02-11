@@ -32,7 +32,7 @@ export default function City({ city }) {
   const { title, cityslug, featuredImage } = city;
 
   return (
-    <Link className="city-margin" to={`/hitta-bostad/${cityslug}`}>
+    <Link className="city-margin" to={`/vara-fastigheter/${cityslug}`}>
       <Box className="box">
         <div className="city bd-highlight">
           <StyledHero img={featuredImage}>

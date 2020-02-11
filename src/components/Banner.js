@@ -1,11 +1,14 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 export default function Banner({ title, subtitle }) {
   if (!subtitle) {
     return (
       <React.Fragment>
         <div className="banner">
-          <h1>{title}</h1>
+          <Fade bottom>
+            <h1>{title}</h1>
+          </Fade>
         </div>
       </React.Fragment>
     );
@@ -13,8 +16,10 @@ export default function Banner({ title, subtitle }) {
     return (
       <React.Fragment>
         <div className="banner">
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
+          <Fade bottom>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+          </Fade>
         </div>
       </React.Fragment>
     );

@@ -8,6 +8,7 @@ import { Layout } from "../components/Layout";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
+import SubFooter from "../components/SubFooter";
 
 export default class SingleCity extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ export default class SingleCity extends Component {
             <CityPropertiesContainer cityid={`${id}`} />
           </section>
         </Layout>
+        <SubFooter cityid={`${id}`} />
         <Footer />
       </React.Fragment>
     );

@@ -7,12 +7,12 @@ import { Layout } from "../components/Layout";
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
 
-const FindProperty = () => {
+const OurProperty = () => {
   return (
     <React.Fragment>
       <Navigationbar />
       <SolidHero color="#313E5D">
-        <Banner title="Hitta bostad" />
+        <Banner title="Våra Fastigheter" />
       </SolidHero>
       <Layout>
         <PropertiesContainer />
@@ -22,4 +22,4 @@ const FindProperty = () => {
   );
 };
 
-export default FindProperty;
+export default OurProperty;

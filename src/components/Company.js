@@ -5,7 +5,6 @@ import styled from "styled-components";
 const StyledHero = styled.div`
   min-height: 18rem;
   height: 100%;
-  width: 29rem;
   background: url(${props => props.img}) center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -26,14 +25,18 @@ export default function Company({ company }) {
     <div className="company bd-highlight" id={companyslug}>
       <div className="row">
         <div className="col-auto">
-          <StyledHero img={featuredImage} />
+          <StyledHero className="company-featured-image" img={featuredImage} />
         </div>
         <div className="col">
           <div className="company-grid-content">
             <span className="company-grid-title">{companyName}</span>
             <span className="company-grid-desc">{descriptionone}</span>
-            <span className="company-grid-desc">{phonenumber}</span>
-            <span className="company-grid-desc">{email}</span>
+            <a href={"tel:" + phonenumber}>
+              <span className="company-grid-desc">{phonenumber}</span>
+            </a>
+            <a href={"mailto:" + email}>
+              <span className="company-grid-desc">{email}</span>
+            </a>
           </div>
         </div>
       </div>

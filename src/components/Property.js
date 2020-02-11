@@ -32,7 +32,7 @@ export default function Property({ property }) {
   return (
     <Link
       className="property-margin"
-      to={`/hitta-bostad/${city.fields.cityslug}/${slug}`}
+      to={`/vara-fastigheter/${city.fields.cityslug}/${slug}`}
     >
       <Box className="box">
         <div className="property bd-highlight">

@@ -20,12 +20,16 @@ function Home({ context }) {
   return (
     <React.Fragment>
       <Navigationbar />
-      <Hero img={homepage.headerImage}>
+      <Hero height="44" img={homepage.headerImage}>
         <div className="overlay"></div>
         <Banner title={homepage.headerTitle} />
       </Hero>
       <Layout>
         <Title title={homepage.contentTitle} />
+        <p className="text-center">{homepage.contentText}</p>
+      </Layout>
+      <Layout>
+        <Title title={homepage.titleCities} />
         <CitiesContainer />
       </Layout>
       <Footer />

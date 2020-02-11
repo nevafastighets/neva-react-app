@@ -8,6 +8,7 @@ function CompaniesContainer({ context }) {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <React.Fragment>
       <CompaniesList companies={companies} />

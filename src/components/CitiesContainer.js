@@ -8,6 +8,7 @@ function CitiesContainer({ context }) {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <React.Fragment>
       <CitiesList cities={cities} />
