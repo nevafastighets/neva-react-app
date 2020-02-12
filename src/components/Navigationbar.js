@@ -10,7 +10,6 @@ const Styles = styled.div`
     background-color: transparent;
     z-index: 1;
     width: 100%;
-    height: 160px;
     padding-top: 15px;
     padding-bottom: 10px;
   }
@@ -39,12 +38,16 @@ const Styles = styled.div`
     }
   }
 
-  .navbar-link--active {
-    padding-bottom: 16px;
-    position: relative;
-  }
-
   @media (min-width: 992px) {
+    .navigationbar {
+      height: 160px;
+    }
+
+    .navbar-link--active {
+      padding-bottom: 16px;
+      position: relative;
+    }
+
     .navbar-link--active:after {
       content: "";
       position: absolute;
@@ -88,6 +91,12 @@ const Styles = styled.div`
   }
 
   @media (max-width: 992px) {
+    .neva-navigationbar {
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 18px;
+    }
+
     nav {
       width: 100%;
       text-align: center;
@@ -95,7 +104,12 @@ const Styles = styled.div`
       background-color: #f7f7f7 !important;
     }
 
+    a.nav-link.navbar-link--active {
+      color: #505050 !important;
+    }
+
     .navigationbar {
+      position: fixed;
       background-color: #f7f7f7 !important;
     }
 
@@ -113,7 +127,7 @@ const Styles = styled.div`
     }
 
     .navbar-nav {
-      margin-top: 10px;
+      margin-top: 30px;
       margin-bottom: 20px;
     }
   }
@@ -122,83 +136,93 @@ const Styles = styled.div`
 export const Navigationbar = () => (
   <Styles>
     <div className="navigationbar">
-      <div className="d-flex flex-row justify-content-center">
-        <Link to="/">
-          <img
-            className="navbar-logo navbar-logo-light"
-            alt=""
-            src={nevaLogo}
-          ></img>
-          <img
-            className="navbar-logo navbar-logo-dark"
-            alt=""
-            src={nevaLogoDark}
-          ></img>
-        </Link>
+      <div className="neva-brandbar">
+        <div className="d-flex flex-row justify-content-center neva-brand">
+          <Link to="/">
+            <img
+              className="navbar-logo navbar-logo-light"
+              alt=""
+              src={nevaLogo}
+            ></img>
+          </Link>
+        </div>
       </div>
-      <div className="d-flex flex-row navbar-menu justify-content-center">
-        <Navbar className="navbar-light" expand="lg">
-          <Navbar.Toggle aria-controls="first-navbar-nav" />
-          <Navbar.Collapse id="first-navbar-nav">
-            <Nav>
-              <Nav.Item>
-                <NavLink
-                  exact
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/"
-                >
-                  Hem
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/vara-fastigheter"
-                >
-                  Våra Fastigheter
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/vara-bolag"
-                >
-                  Våra bolag
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/om-oss"
-                >
-                  Om oss
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/hyresobjekt"
-                >
-                  Hyresobjekt
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  activeClassName="navbar-link--active"
-                  className="nav-link"
-                  to="/kontakt"
-                >
-                  Kontakt
-                </NavLink>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+      <div className="neva-navigationbar">
+        <div className="d-flex flex-row navbar-menu justify-content-center">
+          <Navbar className="navbar-light" expand="lg">
+            <div className="neva-navbar-brand">
+              <Link to="/">
+                <img
+                  className="navbar-logo navbar-logo-dark"
+                  alt=""
+                  src={nevaLogoDark}
+                ></img>
+              </Link>
+            </div>
+            <div className="neva-navbar-toggler">
+              <Navbar.Toggle aria-controls="first-navbar-nav" />
+            </div>
+            <Navbar.Collapse id="first-navbar-nav">
+              <Nav>
+                <Nav.Item>
+                  <NavLink
+                    exact
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/"
+                  >
+                    Hem
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/vara-fastigheter"
+                  >
+                    Våra Fastigheter
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/vara-bolag"
+                  >
+                    Våra bolag
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/om-oss"
+                  >
+                    Om oss
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/hyresobjekt"
+                  >
+                    Hyresobjekt
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    activeClassName="navbar-link--active"
+                    className="nav-link"
+                    to="/kontakt"
+                  >
+                    Kontakt
+                  </NavLink>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
       </div>
     </div>
   </Styles>

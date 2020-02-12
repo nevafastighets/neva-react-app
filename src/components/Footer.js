@@ -43,8 +43,6 @@ const Styles = styled.div`
 
   .footer-flex {
     height: 100%;
-    margin-left: 3.25rem;
-    margin-right: 3.25rem;
   }
 
   .p-2 {
@@ -55,6 +53,24 @@ const Styles = styled.div`
     word-wrap: break-word;
     max-width: 34rem;
     letter-spacing: 1.3px;
+  }
+
+  @media (min-width: 992px) {
+    .footer-flex {
+      margin-left: 3.25rem;
+      margin-right: 3.25rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .footer-flex {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    .footer-flex .p-2 {
+      padding: 1rem 1rem 0rem 1rem !important;
+    }
   }
 `;
 

@@ -264,14 +264,40 @@ h3 {
 .city {
   /* height: 15rem;
   width: 21.5rem; */
-  height: 18rem;
-  width: 30rem;
   transition: all 0.5s ease;
 }
 
 /* .city:hover {
   width: 22rem;
 } */
+
+@media (min-width: 992px) {
+  .city {
+    height: 18rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .city {
+    height: 18rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .city {
+    height: 17rem;
+    width: 24rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .city {
+    height: 14.5rem;
+    width: 20rem;
+  }
+}
 
 .property {
   height: 29.75rem;
@@ -373,6 +399,18 @@ visited {
   opacity: 0.8;
   width: 70% !important;
   display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .company-grid-desc {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .company-grid-desc {
+    width: 100% !important;
+  }
 }
 
 .section-title {

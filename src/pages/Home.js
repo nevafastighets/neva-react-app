@@ -4,12 +4,17 @@ import Banner from "../components/Banner";
 import CitiesContainer from "../components/CitiesContainer";
 import { Layout } from "../components/Layout";
 import Title from "../components/Title";
+import styled from "styled-components";
 
 import { withPageConsumer } from "../PageContext";
 import Preloader from "../components/Preloader";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
+
+const BannerMargin = styled.div`
+  margin-top: 6rem;
+`;
 
 function Home({ context }) {
   const { loading, homepage } = context;
@@ -22,7 +27,9 @@ function Home({ context }) {
       <Navigationbar />
       <Hero height="44" img={homepage.headerImage}>
         <div className="overlay"></div>
-        <Banner title={homepage.headerTitle} />
+        <BannerMargin>
+          <Banner title={homepage.headerTitle} />
+        </BannerMargin>
       </Hero>
       <Layout>
         <Title title={homepage.contentTitle} />

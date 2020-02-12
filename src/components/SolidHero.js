@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SolidHero = styled.header`
-  height: 41.1875rem;
+  height: ${props => props.height || 41}.1875rem;
   background-color: ${props => props.color};
   display: flex;
   align-items: center;
