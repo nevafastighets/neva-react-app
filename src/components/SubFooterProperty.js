@@ -52,7 +52,7 @@ const Styles = styled.div`
 }
 `;
 
-export default function SubFooter({ ciity }) {
+export default function SubFooter({ areaOne, areaTwo }) {
   return (
     <Styles>
       <div className="subfooter d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row">
@@ -60,18 +60,16 @@ export default function SubFooter({ ciity }) {
           className="flex-item-sf"
           style={{
             backgroundImage:
-              "url(" +
-              ciity.fields.subfooterAreaOne.fields.headerImage.fields.file.url +
-              ")"
+              "url(" + areaOne.fields.headerImage.fields.file.url + ")"
           }}
         >
           <Link
             className="experience-link"
-            to={`/upplev/${ciity.fields.subfooterAreaOne.fields.experienceslug}`}
+            to={`/upplev/${areaOne.fields.experienceslug}`}
           >
             <div className="experience-link-flex d-flex justify-content-center align-items-center">
               <div className="p-2 flex-item-content-sf">
-                <h1>{ciity.fields.subfooterAreaOne.fields.headerTitle}</h1>
+                <h1>{areaOne.fields.headerTitle}</h1>
               </div>
             </div>
           </Link>
@@ -80,18 +78,16 @@ export default function SubFooter({ ciity }) {
           className="flex-item-sf"
           style={{
             backgroundImage:
-              "url(" +
-              ciity.fields.subfooterAreaOne.fields.headerImage.fields.file.url +
-              ")"
+              "url(" + areaTwo.fields.headerImage.fields.file.url + ")"
           }}
         >
           <Link
             className="experience-link"
-            to={`/upplev/${ciity.fields.subfooterAreaOne.fields.experienceslug}`}
+            to={`/upplev/${areaTwo.fields.experienceslug}`}
           >
             <div className="experience-link-flex d-flex justify-content-center align-items-center">
               <div className="p-2 flex-item-content-sf">
-                <h1>{ciity.fields.subfooterAreaOne.fields.headerTitle}</h1>
+                <h1>{areaTwo.fields.headerTitle}</h1>
               </div>
             </div>
           </Link>
