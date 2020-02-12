@@ -18,10 +18,6 @@ const Styles = styled.div`
     padding: 0;
   }
 
-  .navbar-logo {
-    height: 68px;
-  }
-
   .navbar-menu {
     margin-top: 15px;
   }
@@ -41,6 +37,10 @@ const Styles = styled.div`
   @media (min-width: 992px) {
     .navigationbar {
       height: 160px;
+    }
+
+    .navbar-logo {
+      height: 68px;
     }
 
     .navbar-link--active {
@@ -92,9 +92,18 @@ const Styles = styled.div`
 
   @media (max-width: 992px) {
     .neva-navigationbar {
+      margin-top: 18px;
       margin-left: 30px;
       margin-right: 30px;
       margin-bottom: 18px;
+    }
+
+    .navbar-logo {
+      height: 52px;
+    }
+
+    .navbar-menu {
+      margin-top: 0px;
     }
 
     nav {
@@ -111,6 +120,7 @@ const Styles = styled.div`
     .navigationbar {
       position: fixed;
       background-color: #f7f7f7 !important;
+      padding: 0;
     }
 
     nav button {

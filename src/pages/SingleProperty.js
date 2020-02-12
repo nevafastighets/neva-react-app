@@ -6,10 +6,15 @@ import { PropertyContext } from "../PropertyContext";
 import StyledHero from "../components/StyledHero";
 import Title from "../components/Title";
 import { Carousel } from "react-bootstrap";
+import styled from "styled-components";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
 import SubFooterProperty from "../components/SubFooterProperty";
+
+const BannerMargin = styled.div`
+  margin-top: 6rem;
+`;
 
 export default class SingleProperty extends Component {
   constructor(props) {
@@ -55,7 +60,12 @@ export default class SingleProperty extends Component {
         <Navigationbar />
         <StyledHero img={featuredImage}>
           <div className="single-overlay"></div>
-          <Banner title={`${title}`} subtitle={`${city.fields.title}`}></Banner>
+          <BannerMargin>
+            <Banner
+              title={`${title}`}
+              subtitle={`${city.fields.title}`}
+            ></Banner>
+          </BannerMargin>
         </StyledHero>
         <div className="row single-property-row row-eq-height">
           <div className="single-property-title col-sm-12 col-lg-6 col-md-12 col-xs-12 container-left">

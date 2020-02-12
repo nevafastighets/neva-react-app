@@ -94,6 +94,10 @@ function Footer({ context }) {
           <div className="p-2 bd-highlight">
             <p className="footer-col-title">{footercontent.areaoneTitle}</p>
             <p className="footer-col-desc">{footercontent.areaoneText}</p>
+          </div>
+          <div className="p-2 bd-highlight">
+            <p className="footer-col-title">{footercontent.areatwoTitle}</p>
+            <p className="footer-col-desc">{footercontent.areatwoText}</p>
             <a
               href="http://alexanderwassbjer.se/"
               rel="noopener noreferrer"
@@ -101,10 +105,6 @@ function Footer({ context }) {
             >
               <p>Website created by Alexander Wassbjer</p>
             </a>
-          </div>
-          <div className="p-2 bd-highlight">
-            <p className="footer-col-title">{footercontent.areatwoTitle}</p>
-            <p className="footer-col-desc">{footercontent.areatwoText}</p>
           </div>
         </div>
       </footer>
