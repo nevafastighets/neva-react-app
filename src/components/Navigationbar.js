@@ -98,6 +98,12 @@ const Styles = styled.div`
       margin-bottom: 18px;
     }
 
+    .navigationbar {
+      -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+      -moz-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+      box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+    }
+
     .navbar-logo {
       height: 52px;
     }
