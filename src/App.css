@@ -443,6 +443,10 @@ visited {
   letter-spacing: 4px;
 }
 
+.flex-item-sf h1 {
+  font-size: 2.5rem;
+}
+
 .experience-link:hover h1 {
   font-size: 2.55rem;
 }
