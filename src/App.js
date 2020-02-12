@@ -9,6 +9,7 @@ import SingleProperty from "./pages/SingleProperty";
 import AboutUs from "./pages/AboutUs";
 import RentObject from "./pages/RentObject";
 import Contact from "./pages/Contact";
+import SingleExperience from "./pages/SingleExperience";
 import Error from "./pages/Error";
 
 import { Route, Switch } from "react-router-dom";
@@ -32,6 +33,11 @@ function App() {
           exact
           path="/vara-fastigheter/:cityslug/:slug"
           component={SingleProperty}
+        />
+        <Route
+          exact
+          path="/upplev/:experienceslug"
+          component={SingleExperience}
         />
         <Route component={Error} />
       </Switch>

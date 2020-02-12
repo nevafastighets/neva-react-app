@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Styles = styled.div`
 .subfooter {
@@ -32,12 +32,27 @@ const Styles = styled.div`
 .flex-item-content-sf {
   text-align: center;
   color: #ffffff;
-  z-index: 1;
+  z-index: 3;
   letter-spacing: 6px;
+}
+
+.experience-link {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.experience-link:hover {
+  text-decoration: none;
+}
+
+.experience-link-flex {
+  height: 100%;
+  width: 100%;
 }
 `;
 
-export default function SubFooter({ city }) {
+export default function SubFooter({ ciity }) {
   return (
     <Styles>
       <div className="subfooter d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row">
@@ -45,23 +60,41 @@ export default function SubFooter({ city }) {
           className="flex-item-sf"
           style={{
             backgroundImage:
-              "url(" + city.fields.subfooterAreaOneImage.fields.file.url + ")"
+              "url(" +
+              ciity.fields.subfooterAreaOne.fields.headerImage.fields.file.url +
+              ")"
           }}
         >
-          <div className="flex-item-content-sf">
-            <h1>{city.fields.subfooterAreaOneTitle}</h1>
-          </div>
+          <Link
+            className="experience-link"
+            to={`/upplev/${ciity.fields.subfooterAreaOne.fields.experienceslug}`}
+          >
+            <div className="experience-link-flex d-flex justify-content-center align-items-center">
+              <div className="p-2 flex-item-content-sf">
+                <h1>{ciity.fields.subfooterAreaOne.fields.headerTitle}</h1>
+              </div>
+            </div>
+          </Link>
         </div>
         <div
           className="flex-item-sf"
           style={{
             backgroundImage:
-              "url(" + city.fields.subfooterAreaTwoImage.fields.file.url + ")"
+              "url(" +
+              ciity.fields.subfooterAreaOne.fields.headerImage.fields.file.url +
+              ")"
           }}
         >
-          <div className="flex-item-content-sf">
-            <h1>{city.fields.subfooterAreaTwoTitle}</h1>
-          </div>
+          <Link
+            className="experience-link"
+            to={`/upplev/${ciity.fields.subfooterAreaOne.fields.experienceslug}`}
+          >
+            <div className="experience-link-flex d-flex justify-content-center align-items-center">
+              <div className="p-2 flex-item-content-sf">
+                <h1>{ciity.fields.subfooterAreaOne.fields.headerTitle}</h1>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </Styles>

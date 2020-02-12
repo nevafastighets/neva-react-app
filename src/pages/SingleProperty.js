@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
-import SubFooterProperty from "../components/SubFooterProperty";
+// import SubFooterProperty from "../components/SubFooterProperty";
 
 const BannerMargin = styled.div`
   margin-top: 6rem;
@@ -111,7 +111,7 @@ export default class SingleProperty extends Component {
             </Carousel>
           </div>
         </div>
-        <SubFooterProperty city={city} />
+        {/* <SubFooterProperty city={city} /> */}
         <Footer />
       </React.Fragment>
     );

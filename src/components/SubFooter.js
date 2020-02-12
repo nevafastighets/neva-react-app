@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { withCityConsumer } from "../CityContext";
 import Loading from "./Loading";
@@ -35,8 +35,23 @@ const Styles = styled.div`
 .flex-item-content-sf {
   text-align: center;
   color: #ffffff;
-  z-index: 1;
+  z-index: 3;
   letter-spacing: 6px;
+}
+
+.experience-link {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.experience-link:hover {
+  text-decoration: none;
+}
+
+.experience-link-flex {
+  height: 100%;
+  width: 100%;
 }
 `;
 
@@ -58,23 +73,41 @@ function SubFooter({ context, cityid }) {
                   className="flex-item-sf"
                   style={{
                     backgroundImage:
-                      "url(" + item.subfooterAreaOneImage.fields.file.url + ")"
+                      "url(" +
+                      item.subfooterAreaOne.fields.headerImage.fields.file.url +
+                      ")"
                   }}
                 >
-                  <div className="flex-item-content-sf">
-                    <h1>{item.subfooterAreaOneTitle}</h1>
-                  </div>
+                  <Link
+                    className="experience-link"
+                    to={`/upplev/${item.subfooterAreaOne.fields.experienceslug}`}
+                  >
+                    <div className="experience-link-flex d-flex justify-content-center align-items-center">
+                      <div className="p-2 flex-item-content-sf">
+                        <h1>{item.subfooterAreaOne.fields.headerTitle}</h1>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
                 <div
                   className="flex-item-sf"
                   style={{
                     backgroundImage:
-                      "url(" + item.subfooterAreaTwoImage.fields.file.url + ")"
+                      "url(" +
+                      item.subfooterAreaTwo.fields.headerImage.fields.file.url +
+                      ")"
                   }}
                 >
-                  <div className="flex-item-content-sf">
-                    <h1>{item.subfooterAreaTwoTitle}</h1>
-                  </div>
+                  <Link
+                    className="experience-link"
+                    to={`/upplev/${item.subfooterAreaTwo.fields.experienceslug}`}
+                  >
+                    <div className="experience-link-flex d-flex justify-content-center align-items-center">
+                      <div className="p-2 flex-item-content-sf">
+                        <h1>{item.subfooterAreaTwo.fields.headerTitle}</h1>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </React.Fragment>
             );
