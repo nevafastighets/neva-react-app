@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
-import SubFooter from "../components/SubFooter";
+// import SubFooter from "../components/SubFooter";
 
 const BannerMargin = styled.div`
   margin-top: 6rem;
@@ -59,7 +59,7 @@ export default class SingleCity extends Component {
             <CityPropertiesContainer cityid={`${id}`} />
           </section>
         </Layout>
-        <SubFooter cityid={`${id}`} />
+        {/* <SubFooter cityid={`${id}`} /> */}
         <Footer />
       </React.Fragment>
     );

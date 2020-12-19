@@ -232,7 +232,7 @@ export const Navigationbar = () => (
                     className="nav-link"
                     to="/kontakt"
                   >
-                    Kontakt
+                    Kontakt & Felanmälan
                   </NavLink>
                 </Nav.Item>
               </Nav>

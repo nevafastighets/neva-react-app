@@ -21,6 +21,8 @@ function RentObject({ context }) {
     return <Preloader />;
   }
 
+  const ReactMarkdown = require('react-markdown')
+
   return (
     <React.Fragment>
       <Navigationbar />
@@ -35,7 +37,8 @@ function RentObject({ context }) {
       </Hero>
       <Layout>
         <Title className="text-left" title={rentobjectpage.contentTitle} />
-        <p>{rentobjectpage.pageText}</p>
+        {/* <p>{rentobjectpage.pageText}</p> */}
+        <ReactMarkdown source={rentobjectpage.pageText} />
       </Layout>
       <Footer />
     </React.Fragment>

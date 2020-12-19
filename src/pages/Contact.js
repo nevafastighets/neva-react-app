@@ -21,6 +21,8 @@ function Contact({ context }) {
     return <Preloader />;
   }
 
+  const ReactMarkdown = require('react-markdown')
+
   return (
     <React.Fragment>
       <Navigationbar />
@@ -34,6 +36,7 @@ function Contact({ context }) {
         </BannerMargin>
       </Hero>
       <Layout>
+      <ReactMarkdown className="textArea" source={contactpage.textArea} />
         <Title
           title={contactpage.contentTitle}
           subtitle={contactpage.contentSubtitle}
@@ -54,6 +57,32 @@ function Contact({ context }) {
                 name="email"
                 placeholder="E-post"
               />
+            </div>
+          </div>
+          <div class="form-group row justify-content-center">
+            <div className="col-md-8 col-lg-4 col-xl-4">
+              <select
+                class="form-control contact-input contact-select"
+                name="type"
+              >
+                <option value="all">Alla ärendetyper</option>
+                <option value="allman">Allmän</option>
+                <option value="avlopp">Avlopp</option>
+                <option value="belysning">Belysning</option>
+                <option value="kranpackning">Byte kranpackning</option>
+                <option value="dorrarfonster">Dörrar/Fönster</option>
+                <option value="el">El</option>
+                <option value="fuktvattenskada">Fukt/Vattenskada</option>
+                <option value="hiss">Hiss</option>
+                <option value="portar">Portar</option>
+                <option value="sopor">Sopor</option>
+                <option value="torkrum">Torkrum</option>
+                <option value="tvattstugeutrustning">Tvättstugeutrustning</option>
+                <option value="ventilation">Ventilation</option>
+                <option value="vitvaror">Vitvaror</option>
+                <option value="varme">Värme</option>
+                <option value="averkanklotter">Åverkan/Klotter</option>
+              </select>
             </div>
           </div>
           <div class="form-group row justify-content-center">

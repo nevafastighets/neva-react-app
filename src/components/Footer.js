@@ -49,7 +49,7 @@ const Styles = styled.div`
     padding: 1rem 3rem 0rem 3rem !important;
   }
 
-  .footer-col-desc {
+  .footer-col-desc p {
     word-wrap: break-word;
     max-width: 34rem;
     letter-spacing: 1.3px;
@@ -80,6 +80,8 @@ function Footer({ context }) {
     return <Loading />;
   }
 
+  const ReactMarkdown = require('react-markdown')
+
   return (
     <Styles>
       <footer className="footer">
@@ -93,11 +95,13 @@ function Footer({ context }) {
           </div>
           <div className="p-2 bd-highlight">
             <p className="footer-col-title">{footercontent.areaoneTitle}</p>
-            <p className="footer-col-desc">{footercontent.areaoneText}</p>
+            {/* <p className="footer-col-desc">{footercontent.areaoneText}</p> */}
+            <ReactMarkdown className="footer-col-desc" source={footercontent.areaoneText} />
           </div>
           <div className="p-2 bd-highlight">
             <p className="footer-col-title">{footercontent.areatwoTitle}</p>
-            <p className="footer-col-desc">{footercontent.areatwoText}</p>
+            {/* <p className="footer-col-desc">{footercontent.areatwoText}</p> */}
+            <ReactMarkdown className="footer-col-desc" source={footercontent.areatwoText} />
             <a
               href="http://alexanderwassbjer.se/"
               rel="noopener noreferrer"

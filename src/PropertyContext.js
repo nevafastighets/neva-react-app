@@ -3,10 +3,6 @@ import Client from "./Contentful";
 
 const PropertyContext = React.createContext();
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
-}
-
 export default class PropertyProvider extends Component {
   state = {
     properties: [],
@@ -18,7 +14,6 @@ export default class PropertyProvider extends Component {
       let response = await Client.getEntries({
         content_type: "fastigheter"
       });
-      shuffle(response.items);
       let properties = this.formatData(response.items);
       this.setState({
         properties,

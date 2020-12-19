@@ -10,7 +10,8 @@ import styled from "styled-components";
 
 import { Navigationbar } from "../components/Navigationbar";
 import Footer from "../components/Footer";
-import SubFooterProperty from "../components/SubFooterProperty";
+// import SubFooterProperty from "../components/SubFooterProperty";
+import { Layout } from "../components/Layout";
 
 const BannerMargin = styled.div`
   margin-top: 6rem;
@@ -49,13 +50,12 @@ export default class SingleProperty extends Component {
       images,
       featuredImage,
       textareaone,
-      textareatwo,
       facilities,
       bolag,
       city,
-      subfooterAreaOne,
-      subfooterAreaTwo
     } = property;
+
+    const ReactMarkdown = require('react-markdown')
 
     return (
       <React.Fragment>
@@ -69,7 +69,45 @@ export default class SingleProperty extends Component {
             ></Banner>
           </BannerMargin>
         </StyledHero>
-        <div className="row single-property-row row-eq-height">
+        <div className="single-property-page">
+          <Layout>
+        <Title title={`${title}`} />
+            <p>
+              Denna fastighet ägs av{" "}
+              <Link to={"../../vara-bolag#" + bolag.fields.companyslug}>
+                {bolag.fields.companyName}
+              </Link>
+            </p>
+            {/* <p>{textareaone}</p> */}
+            <ReactMarkdown source={textareaone} />
+            <div className="facility-title">
+              <p>Bekvämligheter:</p>
+            </div>
+            {facilities.map((item, index) => {
+              return (
+                <div key={index} className="facility">
+                  <p>- {item}</p>
+                </div>
+              );
+            })}
+            <div className="d-flex justify-content-center">
+            <Carousel className="single-property-gallery-carousel">
+              {images.map((item, index) => {
+                return (
+                  <Carousel.Item key={index}>
+                    <img
+                      className="d-block w-100"
+                      src={item + "?fit=scale&h=560"}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+            </div>
+            </Layout>
+        </div>
+        {/* <div className="row single-property-row row-eq-height">
           <div className="single-property-title col-sm-12 col-lg-6 col-md-12 col-xs-12 container-left">
             <Title title={`${title}`} />
             <p>
@@ -112,11 +150,11 @@ export default class SingleProperty extends Component {
               })}
             </Carousel>
           </div>
-        </div>
-        <SubFooterProperty
+        </div> */}
+        {/* <SubFooterProperty
           areaOne={subfooterAreaOne}
           areaTwo={subfooterAreaTwo}
-        />
+        /> */}
         <Footer />
       </React.Fragment>
     );

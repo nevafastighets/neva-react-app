@@ -21,6 +21,8 @@ function AboutUs({ context }) {
     return <Preloader />;
   }
 
+  const ReactMarkdown = require('react-markdown')
+
   return (
     <React.Fragment>
       <Navigationbar />
@@ -35,7 +37,8 @@ function AboutUs({ context }) {
       </Hero>
       <Layout>
         <Title className="text-left" title={aboutuspage.contentTitle} />
-        <p>{aboutuspage.pageText}</p>
+        {/* <p>{aboutuspage.pageText}</p> */}
+        <ReactMarkdown source={aboutuspage.pageText} />
       </Layout>
       <Footer />
     </React.Fragment>
