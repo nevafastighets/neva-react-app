@@ -3,7 +3,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import OurProperty from "./pages/OurProperty";
-import OurCompany from "./pages/OurCompany";
+import FreeObject from "./pages/FreeObject";
 import SingleCity from "./pages/SingleCity";
 import SingleProperty from "./pages/SingleProperty";
 import AboutUs from "./pages/AboutUs";
@@ -25,9 +25,9 @@ function App() {
           path="/vara-fastigheter/:cityslug"
           component={SingleCity}
         />
-        <Route exact path="/vara-bolag" component={OurCompany} />
-        <Route exact path="/om-oss" component={AboutUs} />
-        <Route exact path="/hyresobjekt" component={RentObject} />
+        <Route exact path="/lediga-objekt" component={FreeObject} />
+        <Route exact path="/om-neva" component={AboutUs} />
+        <Route exact path="/hyresgaster" component={RentObject} />
         <Route exact path="/kontakt" component={Contact} />
         <Route
           exact

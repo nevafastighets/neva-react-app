@@ -203,27 +203,27 @@ export const Navigationbar = () => (
                   <NavLink
                     activeClassName="navbar-link--active"
                     className="nav-link"
-                    to="/vara-bolag"
+                    to="/lediga-objekt"
                   >
-                    Våra bolag
+                    Lediga objekt
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
                   <NavLink
                     activeClassName="navbar-link--active"
                     className="nav-link"
-                    to="/om-oss"
+                    to="/om-neva"
                   >
-                    Om oss
+                    Om Neva
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
                   <NavLink
                     activeClassName="navbar-link--active"
                     className="nav-link"
-                    to="/hyresobjekt"
+                    to="/hyresgaster"
                   >
-                    Hyresobjekt
+                    För våra hyresgäster
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>

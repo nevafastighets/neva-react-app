@@ -1,5 +1,5 @@
 import React from "react";
-import loadingGif from "../assets/gif/loading-dots.gif";
+import loadingGif from "../assets/gif/loader.gif";
 
 export default function Preloader() {
   return (

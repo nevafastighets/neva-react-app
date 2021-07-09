@@ -85,7 +85,7 @@ function Footer({ context }) {
   return (
     <Styles>
       <footer className="footer">
-        <div className="d-flex footer-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-row">
+        <div className="d-flex footer-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-column flex-xxl-row">
           <div className="p-2 bd-highlight">
             <Link to="/">
               <img className="footer-logo" alt="" src={nevaLogo}></img>
@@ -103,6 +103,7 @@ function Footer({ context }) {
             {/* <p className="footer-col-desc">{footercontent.areatwoText}</p> */}
             <ReactMarkdown className="footer-col-desc" source={footercontent.areatwoText} />
             <a
+              className="created-by"
               href="http://alexanderwassbjer.se/"
               rel="noopener noreferrer"
               target="_blank"

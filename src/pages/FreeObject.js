@@ -17,7 +17,7 @@ const BannerMargin = styled.div`
   margin-top: 6rem;
 `;
 
-function OurCompany({ context }) {
+function FreeObject({ context }) {
   const { loading, ourcompanypage } = context;
   if (loading) {
     return <Preloader />;
@@ -46,4 +46,4 @@ function OurCompany({ context }) {
   );
 }
 
-export default withPageConsumer(OurCompany);
+export default withPageConsumer(FreeObject);
