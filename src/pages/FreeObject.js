@@ -32,7 +32,6 @@ function FreeObject({ context }) {
           <BannerMargin>
             <Banner
               title={ourcompanypage.headerTitle}
-              subtitle={ourcompanypage.headerSubtitle}
             />
           </BannerMargin>
         </Hero>
